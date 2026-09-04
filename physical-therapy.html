@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="robots" content="noindex,nofollow,noarchive,nosnippet"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Physical Therapist &amp; Rehab System | Rico Cloud — Physical Therapy Automation</title>
+<meta name="description" content="The complete automation system for physical therapy and rehab clinics. Pain-specific nurture, discharge follow-up, reactivation, and review campaigns. Live in 7 days.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--red:#BF0000;--red-hot:#D90000;--navy:#1B3A6B;--gold:#F5A623;--green:#1A6B2E;--char:#1A1A1A;--offwhite:#F5F5F5;--body:#4A4A4A;--fd:'Barlow Condensed',sans-serif;--fb:'DM Sans',sans-serif;--accent:#1B3A6B;}
+html{scroll-behavior:smooth}body{font-family:var(--fb);background:#fff;color:var(--body);overflow-x:hidden}
+nav{position:fixed;top:0;left:0;right:0;z-index:500;height:64px;background:rgba(26,26,26,.97);backdrop-filter:blur(24px);border-bottom:1px solid rgba(255,255,255,.07);display:flex;align-items:center;justify-content:space-between;padding:0 48px}
+.nl{font-family:var(--fd);font-size:22px;font-weight:900;letter-spacing:4px;text-decoration:none;color:#fff;text-transform:uppercase}.nl span{color:var(--red)}
+.nback{color:rgba(255,255,255,.4);text-decoration:none;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;transition:color .2s}.nback:hover{color:#fff}
+.ncta{background:var(--accent);color:#fff;text-decoration:none;font-family:var(--fd);font-weight:700;font-size:11px;letter-spacing:2px;text-transform:uppercase;padding:10px 24px;border-radius:2px;transition:background .2s}.ncta:hover{background:#152e56}
+.hero{min-height:92vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:140px 48px 80px;position:relative;overflow:hidden;background:#0D1B33}
+.hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(27,58,107,.15) 1px,transparent 1px),linear-gradient(90deg,rgba(27,58,107,.15) 1px,transparent 1px);background-size:56px 56px}
+.hero::after{content:'';position:absolute;bottom:-100px;left:50%;transform:translateX(-50%);width:900px;height:600px;background:radial-gradient(circle,rgba(27,58,107,.25) 0%,transparent 65%);pointer-events:none}
+.hin{position:relative;z-index:1;max-width:900px}
+.pill{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(91,141,217,.3);background:rgba(91,141,217,.08);padding:7px 18px;border-radius:2px;margin-bottom:24px;font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:#7BA8E0}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+.pd{width:6px;height:6px;background:#7BA8E0;border-radius:50%;animation:blink 2s infinite}
+@keyframes up{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+.h1{font-family:var(--fd);font-size:clamp(52px,9.5vw,116px);font-weight:900;line-height:.86;letter-spacing:-2px;text-transform:uppercase;color:#fff;margin-bottom:24px;animation:up .7s ease both}.h1 em{font-style:normal;color:var(--red)}
+.hsub{font-size:clamp(17px,2vw,21px);line-height:1.75;color:rgba(255,255,255,.5);max-width:660px;margin:0 auto 40px;animation:up .7s .15s ease both;opacity:0}
+.price-badge{display:inline-flex;align-items:center;gap:16px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);padding:14px 28px;border-radius:2px;margin-bottom:36px;animation:up .7s .22s ease both;opacity:0;flex-wrap:wrap;justify-content:center}
+.pb-item{text-align:center}.pb-val{font-family:var(--fd);font-size:26px;font-weight:900;color:#fff;display:block;line-height:1}.pb-lbl{font-size:11px;color:rgba(255,255,255,.28);letter-spacing:.5px;margin-top:3px}
+.pb-div{width:1px;height:36px;background:rgba(255,255,255,.08)}
+.hbtns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;animation:up .7s .32s ease both;opacity:0}
+.bp{background:var(--accent);color:#fff;text-decoration:none;font-family:var(--fd);font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:2.5px;padding:18px 44px;border-radius:2px;display:inline-block;transition:all .2s}.bp:hover{background:#152e56;transform:translateY(-2px);box-shadow:0 12px 40px rgba(27,58,107,.5)}
+.bo{background:transparent;color:#fff;text-decoration:none;font-family:var(--fd);font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:2px;padding:16px 36px;border-radius:2px;border:1px solid rgba(255,255,255,.18);display:inline-block;transition:all .2s}.bo:hover{border-color:rgba(255,255,255,.45);transform:translateY(-2px)}
+.htrust{display:flex;align-items:center;justify-content:center;gap:28px;flex-wrap:wrap;margin-top:52px;padding-top:28px;border-top:1px solid rgba(255,255,255,.06);animation:up .7s .42s ease both;opacity:0}
+.ht{font-size:12px;color:rgba(255,255,255,.25)}.ht strong{color:rgba(255,255,255,.45);font-weight:500}
+.sec{padding:88px 48px}.con{max-width:1100px;margin:0 auto}
+.sec-white{background:#fff}.sec-off{background:var(--offwhite)}.sec-dark{background:var(--char)}
+.ey{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--accent);margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.ey::before{content:'';width:24px;height:1px;background:var(--accent)}.ey.cen{justify-content:center}.ey.cen::before{display:none}
+.sh{font-family:var(--fd);font-size:clamp(32px,5vw,60px);font-weight:900;line-height:.92;letter-spacing:-.5px;text-transform:uppercase;margin-bottom:14px}
+.sh span{color:var(--red)}.sh.dk{color:var(--char)}.sh.lt{color:#fff}
+.ss{font-size:17px;line-height:1.75;color:var(--body);max-width:560px;margin-bottom:48px}.ss.cen{text-align:center;margin-left:auto;margin-right:auto}.cen{text-align:center}
+/* PAIN CARDS */
+.pain-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:48px}
+.pain{background:var(--offwhite);border:1px solid #E0E0E0;border-radius:4px;padding:28px 22px;border-top:3px solid var(--accent);text-align:center;transition:all .2s}.pain:hover{background:#fff;transform:translateY(-3px)}
+.pain-icon{font-size:32px;margin-bottom:12px}
+.pain h4{font-family:var(--fd);font-size:18px;font-weight:800;text-transform:uppercase;color:var(--char);margin-bottom:8px}
+.pain p{font-size:12px;color:var(--body);line-height:1.6}
+.pain-seq{display:inline-block;margin-top:12px;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent);font-weight:600}
+/* SYSTEM GRID */
+.sys-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#E0E0E0;border:1px solid #E0E0E0;border-radius:4px;overflow:hidden;margin-top:48px}
+.sg{background:#fff;padding:36px 32px;border-top:3px solid transparent;transition:all .2s}.sg:hover{background:#FAFAFA;border-top-color:var(--accent)}
+.sg-icon{font-size:28px;margin-bottom:14px}
+.sg-num{font-family:var(--fd);font-size:44px;font-weight:900;color:var(--offwhite);line-height:1;margin-bottom:4px}
+.sg h4{font-family:var(--fd);font-size:19px;font-weight:800;text-transform:uppercase;letter-spacing:.3px;color:var(--char);margin-bottom:8px}
+.sg p{font-size:13px;color:var(--body);line-height:1.65}
+/* JOURNEY */
+.journey{display:flex;flex-direction:column;gap:0;border:1px solid #E0E0E0;border-radius:4px;overflow:hidden;margin-top:48px}
+.jstage{display:grid;grid-template-columns:200px 1fr;border-bottom:1px solid #E0E0E0}
+.jstage:last-child{border-bottom:none}
+.jlabel{background:#0D1B33;padding:28px 24px;display:flex;flex-direction:column;justify-content:center}
+.jl-num{font-family:var(--fd);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:#7BA8E0;margin-bottom:4px}
+.jl-name{font-family:var(--fd);font-size:17px;font-weight:800;text-transform:uppercase;color:#fff;line-height:1.1}
+.jbody{background:#fff;padding:28px 32px;display:flex;flex-direction:column;justify-content:center}
+.jb-head{font-size:14px;font-weight:600;color:var(--char);margin-bottom:8px}
+.jb-items{display:flex;flex-wrap:wrap;gap:6px}
+.jchip{background:var(--offwhite);border:1px solid #E0E0E0;padding:4px 12px;border-radius:2px;font-size:11px;color:var(--body)}
+.jchip.sms{background:rgba(191,0,0,.05);border-color:rgba(191,0,0,.15);color:var(--red)}
+.jchip.email{background:rgba(27,58,107,.05);border-color:rgba(27,58,107,.15);color:var(--navy)}
+.jchip.auto{background:rgba(26,107,46,.05);border-color:rgba(26,107,46,.15);color:var(--green)}
+/* WHO */
+.who-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:48px}
+.who{background:#fff;border:1px solid #E0E0E0;border-radius:4px;padding:30px 26px;border-top:3px solid var(--accent);transition:transform .2s}.who:hover{transform:translateY(-3px)}
+.who-icon{font-size:26px;margin-bottom:12px}
+.who h4{font-family:var(--fd);font-size:19px;font-weight:800;text-transform:uppercase;color:var(--char);margin-bottom:8px}
+.who p{font-size:13px;color:var(--body);line-height:1.65}
+/* PRICING */
+.price-box{background:#0D1B33;border:1px solid rgba(91,141,217,.2);border-top:3px solid var(--accent);border-radius:4px;padding:56px;text-align:center;margin-top:48px;position:relative;overflow:hidden}
+.price-box::before{content:'';position:absolute;bottom:-60px;left:50%;transform:translateX(-50%);width:600px;height:400px;background:radial-gradient(circle,rgba(27,58,107,.3) 0%,transparent 65%);pointer-events:none}
+.pb-inner{position:relative;z-index:1}
+.pb-eyebrow{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:#7BA8E0;margin-bottom:16px}
+.pb-main{font-family:var(--fd);font-size:clamp(40px,7vw,80px);font-weight:900;color:#fff;line-height:.9;margin-bottom:8px}
+.pb-main span{color:var(--red)}
+.pb-sub{font-size:14px;color:rgba(255,255,255,.3);margin-bottom:40px}
+.pb-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.pb-includes{display:flex;align-items:center;justify-content:center;gap:24px;flex-wrap:wrap;margin-top:32px;padding-top:28px;border-top:1px solid rgba(255,255,255,.07)}
+.pbi{font-size:12px;color:rgba(255,255,255,.28)}.pbi strong{color:rgba(255,255,255,.5);font-weight:500}
+/* FAQ */
+.faqlist{margin-top:48px;border:1px solid #E0E0E0;border-radius:4px;overflow:hidden}
+.faq{border-bottom:1px solid #E0E0E0}.faq:last-child{border-bottom:none}
+.fq{padding:20px 26px;font-size:15px;font-weight:600;color:var(--char);cursor:pointer;display:flex;align-items:center;justify-content:space-between;transition:background .15s;user-select:none}.fq:hover{background:var(--offwhite)}.fqi{font-size:20px;color:var(--accent);transition:transform .25s;flex-shrink:0}
+.fa{max-height:0;overflow:hidden;transition:max-height .3s ease;background:var(--offwhite)}.fai{padding:0 26px 22px;font-size:14px;line-height:1.75;color:var(--body)}
+.faq.open .fa{max-height:400px}.faq.open .fqi{transform:rotate(45deg)}.faq.open .fq{background:var(--offwhite)}
+/* CHECKOUT */
+.checkout{background:#080C16;padding:100px 48px;position:relative;overflow:hidden}
+.checkout::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(27,58,107,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(27,58,107,.08) 1px,transparent 1px);background-size:56px 56px}
+.checkout::after{content:'';position:absolute;top:-100px;left:50%;transform:translateX(-50%);width:700px;height:500px;background:radial-gradient(circle,rgba(27,58,107,.18) 0%,transparent 65%);pointer-events:none}
+.coin{max-width:740px;margin:0 auto;position:relative;z-index:1}
+.co-head{text-align:center;margin-bottom:56px}
+.cobadge{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(91,141,217,.25);background:rgba(91,141,217,.06);padding:7px 18px;border-radius:2px;margin-bottom:24px;font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:#7BA8E0}
+.coh{font-family:var(--fd);font-size:clamp(40px,7vw,80px);font-weight:900;text-transform:uppercase;color:#fff;line-height:.9;margin-bottom:12px}.coh span{color:var(--red)}
+.cosub{font-size:15px;color:rgba(255,255,255,.4);line-height:1.65}
+.co-options{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.co-opt{background:#0D1B33;border:1px solid rgba(91,141,217,.15);border-radius:4px;padding:40px;text-align:center}
+.co-opt.primary{border-top:2px solid var(--accent)}
+.co-opt.secondary{border-top:2px solid rgba(255,255,255,.1)}
+.co-opt-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.25);margin-bottom:16px}
+.co-opt h4{font-family:var(--fd);font-size:22px;font-weight:800;text-transform:uppercase;color:#fff;margin-bottom:8px}
+.co-opt p{font-size:13px;color:rgba(255,255,255,.35);line-height:1.6;margin-bottom:24px}
+.coph{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;min-height:160px;border:1px dashed rgba(91,141,217,.2);border-radius:2px;padding:28px}
+.coph-icon{font-size:28px;opacity:.2}.coph-txt{font-size:12px;color:rgba(255,255,255,.18);text-align:center;line-height:1.6}
+.coph-tag{background:rgba(27,58,107,.15);border:1px solid rgba(91,141,217,.25);color:#7BA8E0;font-size:10px;letter-spacing:2px;text-transform:uppercase;padding:6px 16px;border-radius:2px}
+.book-btn{display:block;background:transparent;color:#fff;text-decoration:none;font-family:var(--fd);font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:2px;padding:16px;border-radius:2px;border:1px solid rgba(255,255,255,.15);transition:all .2s;text-align:center}.book-btn:hover{border-color:rgba(255,255,255,.4);transform:translateY(-1px)}
+.coguarantee{margin-top:24px;font-size:12px;color:rgba(255,255,255,.2);text-align:center}
+footer{background:#060C18;border-top:1px solid rgba(255,255,255,.04)}
+.fbot{max-width:1100px;margin:0 auto;padding:18px 48px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.fbot span,.fbot a{font-size:12px;color:rgba(255,255,255,.2);text-decoration:none}.fbot a{color:var(--red)}.fbot a:hover{text-decoration:underline}
+.fleg{display:flex;gap:20px}.fleg a{font-size:12px;color:rgba(255,255,255,.15);text-decoration:none;transition:color .2s}.fleg a:hover{color:rgba(255,255,255,.4)}
+@media(max-width:900px){.pain-grid{grid-template-columns:repeat(2,1fr)}.sys-grid,.who-grid,.co-options{grid-template-columns:1fr}.jstage{grid-template-columns:1fr}}
+@media(max-width:640px){nav{padding:0 20px}.hero,.sec,.checkout{padding-left:24px;padding-right:24px}.price-box{padding:36px 24px}}
+
+/* ===== LOGO BAR ===== */
+.lbar{background:#0A0A0A;border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06);padding:40px 0 44px;overflow:hidden}
+.lbar-head{text-align:center;margin-bottom:28px;padding:0 48px}
+.lbar-eyebrow{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.25);margin-bottom:10px}
+.lbar-title{font-family:var(--fd, "Barlow Condensed",sans-serif);font-size:clamp(22px,3vw,32px);font-weight:900;text-transform:uppercase;letter-spacing:-.3px;color:#fff}
+.lbar-title span{color:#BF0000}
+.lbar-track-wrap{position:relative;overflow:hidden}
+.lbar-track-wrap::before,.lbar-track-wrap::after{content:"";position:absolute;top:0;bottom:0;width:120px;z-index:2;pointer-events:none}
+.lbar-track-wrap::before{left:0;background:linear-gradient(90deg,#0A0A0A,transparent)}
+.lbar-track-wrap::after{right:0;background:linear-gradient(270deg,#0A0A0A,transparent)}
+.lbar-track{display:flex;align-items:center;gap:0;width:max-content}
+@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.lbar-track{animation:marquee 32s linear infinite}
+.lbar-track:hover{animation-play-state:paused}
+.llogo{display:flex;align-items:center;justify-content:center;padding:0 48px;flex-shrink:0;opacity:.4;transition:opacity .3s;filter:grayscale(100%) brightness(200%)}
+.llogo:hover{opacity:.75}
+.llogo img{height:36px;width:auto;max-width:140px;object-fit:contain;display:block}
+.llogo-ph{display:flex;align-items:center;justify-content:center;height:36px;padding:0 4px}
+.llogo-ph-inner{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.06);border-radius:2px;height:36px;display:flex;align-items:center;justify-content:center;padding:0 20px;white-space:nowrap}
+.llogo-ph-text{font-family:var(--fd,"Barlow Condensed",sans-serif);font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.25)}
+.lbar-note{text-align:center;margin-top:24px;padding:0 48px;font-size:11px;color:rgba(255,255,255,.15);letter-spacing:.5px}
+</style>
+</head>
+<body><div id="rc-review-draft-banner" style="position:relative;z-index:99999;width:100%;padding:8px 16px;background:#f2c94c;color:#161616;text-align:center;font:800 12px/1.4 system-ui,-apple-system,sans-serif;letter-spacing:.08em;border-bottom:1px solid rgba(0,0,0,.25);">REVIEW DRAFT — NOT THE LIVE WEBSITE</div>
+<nav>
+  <a href="index.html" class="nl">RICO <span>CLOUD</span></a>
+  <a href="solutions.html" class="nback">← All Solutions</a>
+  <a href="#checkout" class="ncta">Get This System</a>
+</nav>
+
+<section class="hero">
+  <div class="hin">
+    <div class="pill"><span class="pd"></span>Physical Therapy · Snapshot System</div>
+    <h1 class="h1">Physical Therapist<br>&amp; Rehab <em>System.</em></h1>
+    <p class="hsub">Built for rehab-first physical therapy clinics. Every patient touchpoint — from pain-driven intake to post-discharge reactivation — automated and deployed in 7 days.</p>
+    <div class="price-badge">
+      <div class="pb-item"><span class="pb-val">$1,000</span><span class="pb-lbl">System Deployment Fee</span></div>
+      <div class="pb-div"></div>
+      <div class="pb-item"><span class="pb-val">$150/mo</span><span class="pb-lbl">Base Subscription</span></div>
+      <div class="pb-div"></div>
+      <div class="pb-item"><span class="pb-val">7 Days</span><span class="pb-lbl">To Go Live</span></div>
+      <div class="pb-div"></div>
+      <div class="pb-item"><span class="pb-val">360-Day</span><span class="pb-lbl">Long-Term Nurture</span></div>
+    </div>
+    <div class="hbtns">
+      <a href="#checkout" class="bp">Get This System — $1,000</a>
+      <a href="book.html" class="bo">Book a Discovery Call</a>
+    </div>
+    <div class="htrust">
+      <span class="ht">Pain-specific nurture: <strong>Back, Knee, Shoulder, Hip</strong></span>
+      <span class="ht" style="color:rgba(255,255,255,.1)">|</span>
+      <span class="ht"><strong>Post-discharge</strong> sequences included</span>
+      <span class="ht" style="color:rgba(255,255,255,.1)">|</span>
+      <span class="ht"><strong>100%</strong> done for you</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== LOGO BAR ===== -->
+<div class="lbar">
+  <div class="lbar-head">
+    <div class="lbar-eyebrow">Trusted By</div>
+    <div class="lbar-title">Businesses <span>Running on Rico Cloud</span></div>
+  </div>
+  <div class="lbar-track-wrap">
+    <div class="lbar-track" id="logoTrack">
+      <!-- LOGO SLOTS — replace llogo-ph divs with <img> tags when logos are ready -->
+      <!-- Slot 1 --><div class="llogo"><div class="llogo-ph"><div class="llogo-ph-inner"><span class="llogo-ph-text">Client Logo</span></div></div></div>
+      <!-- Slot 2 --><div class="llogo"><div class="llogo-ph"><div class="llogo-ph-inner"><span class="llogo-ph-text">Client Logo</span></div></div></div>
+      <!-- Slot 3 --><div class="llogo"><div class="llogo-ph"><div class="llogo-ph-inner"><span class="llogo-ph-text">Client Logo</span></div></div></div>
+      <!-- Slot 4 --><div class="llogo"><div class="llogo-ph"><div class="llogo-ph-inner"><span class="llogo-ph-text">Client Logo</span></div></div></div>
+      <!-- Slot 5 --><div class="llogo"><div class="llogo-ph"><div class="llogo-ph-inner"><span class="llogo-ph-text">Client Logo</span></div></div></div>
+      <!-- Slot 6 --><div class="llogo"><div class="llogo-ph"><div class="llogo-ph-inner"><span class="llogo-ph-text">Client Logo</span></div></div></div>
+      <!-- Slot 7 --><div class="llogo"><div class="llogo-ph"><div class="llogo-ph-inner"><span class="llogo-ph-text">Client Logo</span></div></div></div>
+      <!-- Slot 8 --><div class="llogo"><div class="llogo-ph"><div class="llogo-ph-inner"><span class="llogo-ph-text">Client Logo</span></div></div></div>
+      <!-- DUPLICATE SET for seamless loop -->
+      <div class="llogo"><div class="llogo-ph"><div class="llogo-ph-inner"><span class="llogo-ph-text">Client Logo</span></div></div></div>
+      <div class="llogo"><div class="llogo-ph"><div class="llogo-ph-inner"><span class="llogo-ph-text">Client Logo</span></div></div></div>
+      <div class="llogo"><div class="llogo-ph"><div class="llogo-ph-inner"><span class="llogo-ph-text">Client Logo</span></div></div></div>
+      <div class="llogo"><div class="llogo-ph"><div class="llogo-ph-inner"><span class="llogo-ph-text">Client Logo</span></div></div></div>
+      <div class="llogo"><div class="llogo-ph"><div class="llogo-ph-inner"><span class="llogo-ph-text">Client Logo</span></div></div></div>
+      <div class="llogo"><div class="llogo-ph"><div class="llogo-ph-inner"><span class="llogo-ph-text">Client Logo</span></div></div></div>
+      <div class="llogo"><div class="llogo-ph"><div class="llogo-ph-inner"><span class="llogo-ph-text">Client Logo</span></div></div></div>
+      <div class="llogo"><div class="llogo-ph"><div class="llogo-ph-inner"><span class="llogo-ph-text">Client Logo</span></div></div></div>
+    </div>
+  </div>
+  <div class="lbar-note">Logos displayed with client permission · More added regularly</div>
+</div>
+<!-- ===== END LOGO BAR ===== -->
+
+
+<!-- PAIN SEQUENCES -->
+<section class="sec sec-white">
+  <div class="con">
+    <div class="ey cen">Pain-Specific Nurture</div>
+    <h2 class="sh dk cen">The right message for<br><span>the right injury.</span></h2>
+    <p class="ss cen">Generic follow-up doesn't work in physical therapy. Every sequence is written for the patient's specific pain point — so every message is relevant from day one.</p>
+    <div class="pain-grid">
+      <div class="pain"><div class="pain-icon">🦴</div><h4>Back Pain</h4><p>Lumbar, lower back, and herniated disc patients. Sequences address fear of surgery, chronic pain, and activity limitations.</p><span class="pain-seq">SMS + Email Sequence</span></div>
+      <div class="pain"><div class="pain-icon">🦵</div><h4>Knee Pain</h4><p>ACL, meniscus, arthritis, and post-surgical patients. Focuses on returning to activity and long-term joint health.</p><span class="pain-seq">SMS + Email Sequence</span></div>
+      <div class="pain"><div class="pain-icon">💪</div><h4>Shoulder</h4><p>Rotator cuff, impingement, and post-surgical shoulder patients. Addresses mobility, daily function, and return to sport.</p><span class="pain-seq">SMS + Email Sequence</span></div>
+      <div class="pain"><div class="pain-icon">🦴</div><h4>Hip</h4><p>Hip replacement, labral tears, and arthritis patients. Sequences cover pre-op preparation and post-surgical recovery timelines.</p><span class="pain-seq">SMS + Email Sequence</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- SYSTEM COMPONENTS -->
+<section class="sec sec-off">
+  <div class="con">
+    <div class="ey cen">System Components</div>
+    <h2 class="sh dk cen">Every component.<br><span>Pre-built.</span></h2>
+    <div class="sys-grid">
+      <div class="sg"><div class="sg-icon">🔄</div><div class="sg-num">28+</div><h4>Automation Workflows</h4><p>Three-layer architecture — pipeline, tag-triggered, and sequence workflows. Every patient touchpoint covered.</p></div>
+      <div class="sg"><div class="sg-icon">🗂️</div><div class="sg-num">4</div><h4>Custom Pipelines</h4><p>Long-Term Nurture, Master Patient Sale, In-Clinic Operational Fulfillment, and Hiring Staff pipelines.</p></div>
+      <div class="sg"><div class="sg-icon">📱</div><div class="sg-num">4×2</div><h4>Pain Nurture Sequences</h4><p>Back, Knee, Shoulder, Hip — each with dedicated SMS and email tracks. Both short-term and 360-day nurture.</p></div>
+      <div class="sg"><div class="sg-icon">📆</div><div class="sg-num">360</div><h4>Long-Term Nurture</h4><p>12 emails over 360 days at 30-day intervals. Keeps discharged patients warm for reactivation over a full year.</p></div>
+      <div class="sg"><div class="sg-icon">🌐</div><div class="sg-num">✓</div><h4>Physical Therapist Funnel Pages</h4><p>Pain-specific landing pages and opt-in funnels. Each pain point has its own page and intake sequence.</p></div>
+      <div class="sg"><div class="sg-icon">⭐</div><div class="sg-num">✓</div><h4>Review Campaigns</h4><p>Google and Healthgrades review request sequences triggered automatically after key patient milestones.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PATIENT JOURNEY -->
+<section class="sec sec-white">
+  <div class="con">
+    <div class="ey cen">The Full Patient Journey</div>
+    <h2 class="sh dk cen">Every touchpoint.<br><span>Automated.</span></h2>
+    <div class="journey">
+      <div class="jstage">
+        <div class="jlabel"><div class="jl-num">Stage 01</div><div class="jl-name">New Inquiry</div></div>
+        <div class="jbody"><div class="jb-head">Patient fills out pain-specific form or calls — system fires immediately</div><div class="jb-items"><span class="jchip auto">Pain-type tag applied</span><span class="jchip sms">Instant SMS response</span><span class="jchip email">Welcome + intake email</span><span class="jchip auto">Pipeline entry</span><span class="jchip auto">Staff notification</span></div></div>
+      </div>
+      <div class="jstage">
+        <div class="jlabel"><div class="jl-num">Stage 02</div><div class="jl-name">Pain Nurture</div></div>
+        <div class="jbody"><div class="jb-head">Pain-specific follow-up sequence over Days 1–14 to convert the inquiry</div><div class="jb-items"><span class="jchip sms">Day 1, 3, 7 SMS</span><span class="jchip email">Day 2, 5, 10 Email</span><span class="jchip auto">Condition-specific copy</span><span class="jchip auto">Booking CTA</span></div></div>
+      </div>
+      <div class="jstage">
+        <div class="jlabel"><div class="jl-num">Stage 03</div><div class="jl-name">Appointment Booked</div></div>
+        <div class="jbody"><div class="jb-head">Initial evaluation booked — confirmation and reminder sequences fire</div><div class="jb-items"><span class="jchip sms">Confirmation SMS</span><span class="jchip email">Intake paperwork email</span><span class="jchip sms">24-hr reminder</span><span class="jchip sms">2-hr reminder</span><span class="jchip auto">No-show recovery</span></div></div>
+      </div>
+      <div class="jstage">
+        <div class="jlabel"><div class="jl-num">Stage 04</div><div class="jl-name">Active Treatment</div></div>
+        <div class="jbody"><div class="jb-head">Patient in treatment — ongoing reminders, home exercise delivery, and care updates</div><div class="jb-items"><span class="jchip auto">Weekly session reminders</span><span class="jchip email">HEP delivery emails</span><span class="jchip auto">Progress check-ins</span><span class="jchip auto">Attendance tracking</span></div></div>
+      </div>
+      <div class="jstage">
+        <div class="jlabel"><div class="jl-num">Stage 05</div><div class="jl-name">Discharge</div></div>
+        <div class="jbody"><div class="jb-head">Patient discharged — post-care sequence, review request, and 360-day nurture begins</div><div class="jb-items"><span class="jchip sms">Post-discharge SMS</span><span class="jchip email">Discharge summary email</span><span class="jchip auto">Google review request</span><span class="jchip auto">30/60/90-day check-ins</span><span class="jchip email">LTN begins (360 days)</span></div></div>
+      </div>
+      <div class="jstage">
+        <div class="jlabel"><div class="jl-num">Stage 06</div><div class="jl-name">Reactivation</div></div>
+        <div class="jbody"><div class="jb-head">Discharged patients re-engaged when an injury flares up or seasonal triggers fire</div><div class="jb-items"><span class="jchip sms">Flare-up trigger SMS</span><span class="jchip email">Re-engagement email</span><span class="jchip auto">Seasonal campaigns</span><span class="jchip auto">1-year recall</span><span class="jchip auto">Pipeline re-entry</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO -->
+<section class="sec sec-off">
+  <div class="con">
+    <div class="ey cen">Who It's For</div>
+    <h2 class="sh dk cen">Built for Physical Therapists &amp;<br><span>rehab practices.</span></h2>
+    <div class="who-grid">
+      <div class="who"><div class="who-icon">🏥</div><h4>Outpatient Physical Therapist Clinics</h4><p>Single and multi-location outpatient practices looking to automate intake, reduce no-shows, and build a 5-star online reputation.</p></div>
+      <div class="who"><div class="who-icon">🦴</div><h4>Orthopedic Practices</h4><p>Orthopedic clinics with a physical therapist department — the system handles the full referral-to-discharge journey with orthopedic-specific messaging.</p></div>
+      <div class="who"><div class="who-icon">🏃</div><h4>Sports Rehab Clinics</h4><p>Clinics treating athletes — the system bridges rehab and return-to-sport with performance-oriented post-discharge follow-up.</p></div>
+      <div class="who"><div class="who-icon">💆</div><h4>Wellness Practices</h4><p>Clinics blending physical therapy, massage, and wellness — the system handles multiple service types with separate intake and follow-up tracks.</p></div>
+      <div class="who"><div class="who-icon">🩺</div><h4>Cash-Pay Physical Therapist</h4><p>Out-of-network and cash-pay practices — the system nurtures price-sensitive leads longer and communicates value before conversion.</p></div>
+      <div class="who"><div class="who-icon">🏢</div><h4>Multi-Location Groups</h4><p>Physical therapist groups with multiple clinic locations — deployed per location with location-specific details in every patient communication.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="sec sec-white">
+  <div class="con" style="max-width:800px">
+    <div class="ey cen">Investment</div>
+    <h2 class="sh dk cen">One system.<br><span>One price.</span></h2>
+    <div class="price-box">
+      <div class="pb-inner">
+        <div class="pb-eyebrow">Physical Therapist &amp; Rehab System — Complete Deployment</div>
+        <div class="pb-main">$1,000 <span>+</span> $150<span style="font-size:28px;color:rgba(255,255,255,.3)">/mo</span></div>
+        <div class="pb-sub">System Deployment Fee + Rico Cloud base subscription</div>
+        <div class="pb-btns">
+          <a href="#checkout" class="bp">Get This System Now</a>
+          <a href="book.html" class="bo" style="border-color:rgba(255,255,255,.2)">Book Discovery Call First</a>
+        </div>
+        <div class="pb-includes">
+          <span class="pbi"><strong>4</strong> pain-specific sequences</span>
+          </span>
+          <span class="pbi-sep" style="color:rgba(255,255,255,.1)">|</span>
+          <span class="pbi"><strong>7-day</strong> deployment</span>
+          </span>
+          <span class="pbi-sep" style="color:rgba(255,255,255,.1)">|</span>
+          <span class="pbi"><strong>360-day</strong> nurture included</span>
+          </span>
+          <span class="pbi-sep" style="color:rgba(255,255,255,.1)">|</span>
+          <span class="pbi">Onboarding <strong>sold separately</strong></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec sec-off">
+  <div class="con" style="max-width:720px">
+    <div class="ey cen">Common Questions</div>
+    <h2 class="sh dk cen">Everything you<br><span>need to know.</span></h2>
+    <div class="faqlist">
+      <div class="faq"><div class="fq">Is this different from Coach In a Box?<span class="fqi">+</span></div><div class="fa"><div class="fai">Yes. The Physical Therapist &amp; Rehab System is built specifically for clinic-based physical therapy — it includes HIPAA-awareness in its messaging approach, post-discharge protocols, insurance-adjacent copy, and a patient journey focus rather than a performance/sales focus. Coach In a Box Variant 1B shares some architecture but this is the expanded, standalone physical therapist-specific deployment.</div></div></div>
+      <div class="faq"><div class="fq">How do the pain-specific sequences work?<span class="fqi">+</span></div><div class="fa"><div class="fai">When a patient fills out a pain-specific form (e.g., the "Back Pain" funnel page), the system tags them automatically and enrolls them in the corresponding sequence. Every SMS and email in that sequence is written for that specific injury — the messaging is relevant from message one rather than generic.</div></div></div>
+      <div class="faq"><div class="fq">What happens after a patient is discharged?<span class="fqi">+</span></div><div class="fa"><div class="fai">The system triggers three things automatically at discharge: a review request sequence (Google and Healthgrades), a post-discharge check-in sequence at 30, 60, and 90 days, and enrollment into the 360-day long-term nurture. That 360-day nurture runs for a full year — so when a patient's injury flares up 8 months later, they call you first.</div></div></div>
+      <div class="faq"><div class="fq">Is this HIPAA compliant?<span class="fqi">+</span></div><div class="fa"><div class="fai">Rico Cloud can be configured for HIPAA compliance at the platform level. The Physical Therapist system's messaging is designed to be general health and wellness content rather than PHI — it doesn't transmit patient medical records or treatment details via SMS or email. We recommend discussing your specific compliance requirements on the discovery call.</div></div></div>
+      <div class="faq"><div class="fq">Can I add more pain categories after deployment?<span class="fqi">+</span></div><div class="fa"><div class="fai">Yes. The four included categories (Back, Knee, Shoulder, Hip) are the core deployment. Additional pain categories can be added as a separate project after your initial system is live.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ONBOARDING UPSELL -->
+<section class="sec sec-off" id="onboarding">
+  <div class="con" style="max-width:900px">
+    <div class="ey cen">Onboarding</div>
+    <h2 class="sh dk cen">Your system is deployed.<br><span>Now learn how to run it.</span></h2>
+    <p class="ss cen" style="margin-bottom:0">Onboarding is separate from your System Deployment Fee. Choose the path that fits how you work.</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:48px">
+      <div style="background:#fff;border:1px solid #E0E0E0;border-radius:4px;overflow:hidden">
+        <div style="background:var(--offwhite);padding:32px 36px;border-bottom:1px solid #E0E0E0;border-top:3px solid #999">
+          <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#999;margin-bottom:10px">Self-Paced</div>
+          <div style="font-family:var(--fd);font-size:36px;font-weight:900;color:var(--char);line-height:.9;margin-bottom:6px">DIY Onboarding</div>
+          <div style="font-family:var(--fd);font-size:48px;font-weight:900;color:var(--char);line-height:1;margin-bottom:4px">$100</div>
+          <div style="font-size:13px;color:#999">One-time course access</div>
+        </div>
+        <div style="padding:28px 36px">
+          <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:28px">
+            <div style="display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--body)"><span style="color:var(--green);font-weight:700;flex-shrink:0"><section class="checkout" id="checkout">#10003;</span>Self-paced video course covering your entire system</div>
+            <div style="display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--body)"><span style="color:var(--green);font-weight:700;flex-shrink:0"><section class="checkout" id="checkout">#10003;</span>Step-by-step walkthroughs of every workflow and pipeline</div>
+            <div style="display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--body)"><span style="color:var(--green);font-weight:700;flex-shrink:0"><section class="checkout" id="checkout">#10003;</span>Written guides and reference documentation</div>
+            <div style="display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--body)"><span style="color:var(--green);font-weight:700;flex-shrink:0"><section class="checkout" id="checkout">#10003;</span>Complete at your own pace, on your own schedule</div>
+            <div style="display:flex;align-items:flex-start;gap:10px;font-size:14px;color:#bbb"><span style="color:#bbb;font-weight:700;flex-shrink:0"><section class="checkout" id="checkout">#8211;</span>No live call included</div>
+            <div style="display:flex;align-items:flex-start;gap:10px;font-size:14px;color:#bbb"><span style="color:#bbb;font-weight:700;flex-shrink:0"><section class="checkout" id="checkout">#8211;</span>No hands-on configuration</div>
+          </div>
+          <div style="display:block;background:var(--char);color:#fff;font-family:var(--fd);font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:2px;padding:14px;border-radius:2px;text-align:center">Add DIY Onboarding <section class="checkout" id="checkout">#8212; $100</div>
+          <div style="font-size:11px;color:#bbb;text-align:center;margin-top:10px">Available immediately after system deployment</div>
+        </div>
+      </div>
+      <div style="background:#fff;border:1px solid #D0D0D0;border-radius:4px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,.08)">
+        <div style="background:var(--char);padding:32px 36px;border-bottom:1px solid #2A2A2A;border-top:3px solid var(--red);position:relative">
+          <div style="position:absolute;top:16px;right:16px;background:var(--red);color:#fff;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;padding:4px 10px;border-radius:2px;font-weight:700">Recommended</div>
+          <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:10px">Done For You</div>
+          <div style="font-family:var(--fd);font-size:36px;font-weight:900;color:#fff;line-height:.9;margin-bottom:6px">Premium Onboarding</div>
+          <div style="font-family:var(--fd);font-size:48px;font-weight:900;color:#fff;line-height:1;margin-bottom:4px">$500</div>
+          <div style="font-size:13px;color:rgba(255,255,255,.3)">One-time onboarding fee</div>
+        </div>
+        <div style="padding:28px 36px">
+          <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:28px">
+            <div style="display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--body)"><span style="color:var(--green);font-weight:700;flex-shrink:0"><section class="checkout" id="checkout">#10003;</span>2-hour live onboarding call with a Rico Cloud specialist</div>
+            <div style="display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--body)"><span style="color:var(--green);font-weight:700;flex-shrink:0"><section class="checkout" id="checkout">#10003;</span>We configure your account settings and integrations with you</div>
+            <div style="display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--body)"><span style="color:var(--green);font-weight:700;flex-shrink:0"><section class="checkout" id="checkout">#10003;</span>Live walkthrough of every workflow, pipeline, and sequence</div>
+            <div style="display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--body)"><span style="color:var(--green);font-weight:700;flex-shrink:0"><section class="checkout" id="checkout">#10003;</span>Custom Q<section class="checkout" id="checkout">amp;A <section class="checkout" id="checkout">#8212; we answer every question specific to your business</div>
+            <div style="display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--body)"><span style="color:var(--green);font-weight:700;flex-shrink:0"><section class="checkout" id="checkout">#10003;</span>Full DIY course access included</div>
+            <div style="display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--body)"><span style="color:var(--green);font-weight:700;flex-shrink:0"><section class="checkout" id="checkout">#10003;</span>Recording of your session delivered after the call</div>
+          </div>
+          <div style="display:block;background:var(--red);color:#fff;font-family:var(--fd);font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:2px;padding:14px;border-radius:2px;text-align:center">Add Premium Onboarding <section class="checkout" id="checkout">#8212; $500</div>
+          <div style="font-size:11px;color:#bbb;text-align:center;margin-top:10px">Scheduled after your system is deployed and live</div>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:20px;background:rgba(191,0,0,.04);border:1px solid rgba(191,0,0,.12);border-radius:4px;padding:16px 24px;text-align:center">
+      <span style="font-size:13px;color:var(--body)"><section class="checkout" id="checkout">#128161; <section class="checkout" id="checkout">nbsp;Not sure which to pick? <strong>Most clients choose Premium</strong> <section class="checkout" id="checkout">#8212; the 2-hour call pays for itself the first time you avoid a workflow issue on your own.</span>
+    </div>
+  </div>
+</section>
+
+<section class="checkout" id="checkout">
+  <div class="coin">
+    <div class="co-head">
+      <div class="cobadge">🩺 Physical Therapist &amp; Rehab System — Get Started</div>
+      <h2 class="coh">Ready to automate<br><span>the full patient journey?</span></h2>
+      <p class="cosub">Buy now and we begin your intake immediately — or book a discovery call if you want to walk through the system first.</p>
+    </div>
+    <div class="co-options">
+      <div class="co-opt primary">
+        <div class="co-opt-label">Option 1 — Buy Now</div>
+        <h4>Get This System</h4>
+        <p>$1,000 System Deployment Fee + $150/mo base. Intake form sent within 24 hours. Live in 7 days.</p>
+        <div class="coph">
+          <div class="coph-icon">🔗</div>
+          <p class="coph-txt">Rico Cloud Order Form<br>Physical Therapist &amp; Rehab System — $1,000 setup</p>
+          <div class="coph-tag">Embed Order Form Here</div>
+        </div>
+      </div>
+      <div class="co-opt secondary">
+        <div class="co-opt-label">Option 2 — Talk First</div>
+        <h4>Book a Discovery Call</h4>
+        <p>30-minute call. We walk through exactly what gets built for your clinic before you commit.</p>
+        <a href="book.html" class="book-btn">Book a Free Discovery Call →</a>
+      </div>
+    </div>
+    <p class="coguarantee">🔒 &nbsp;Satisfaction guaranteed · Secure checkout · 7-day deployment</p>
+  </div>
+</section>
+<footer><div class="fbot"><span>© 2026 Rico Cloud. All rights reserved. &nbsp;·&nbsp; <a href="https://land.ricocloud.net/terms--condition" target="_blank">Terms</a> &nbsp;·&nbsp; <a href="https://land.ricocloud.net/privacy-policy" target="_blank">Privacy</a></span><div class="fleg"><a href="solutions.html">All Solutions</a><a href="pricing.html">Platform Pricing</a><a href="https://app.ricocloud.net" target="_blank">Login</a></div><span>By <a href="https://rawreelmedia.com" target="_blank">Raw Reel Media</a> &nbsp;·&nbsp; Powered by <a href="https://ricocloud.net" target="_blank">Rico Cloud</a></span></div></footer>
+<script>document.querySelectorAll('.fq').forEach(q=>{q.addEventListener('click',()=>{const f=q.parentElement,o=f.classList.contains('open');document.querySelectorAll('.faq').forEach(x=>x.classList.remove('open'));if(!o)f.classList.add('open');});});</script>
+</body>
+</html>

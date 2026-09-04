@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="robots" content="noindex,nofollow,noarchive,nosnippet"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Medical Office System | Rico Cloud — Automation for Medical Practices</title>
+<meta name="description" content="The done-for-you automation system for medical offices and specialty practices. Patient intake, appointment follow-up, review generation, and reactivation — deployed in 7 days.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--red:#BF0000;--red-hot:#D90000;--teal:#0D6B6B;--teal2:#0A5252;--gold:#F5A623;--green:#1A6B2E;--char:#1A1A1A;--offwhite:#F5F5F5;--body:#4A4A4A;--fd:'Barlow Condensed',sans-serif;--fb:'DM Sans',sans-serif;--accent:#0D6B6B;}
+html{scroll-behavior:smooth}body{font-family:var(--fb);background:#fff;color:var(--body);overflow-x:hidden}
+nav{position:fixed;top:0;left:0;right:0;z-index:500;height:64px;background:rgba(26,26,26,.97);backdrop-filter:blur(24px);border-bottom:1px solid rgba(255,255,255,.07);display:flex;align-items:center;justify-content:space-between;padding:0 48px}
+.nl{font-family:var(--fd);font-size:22px;font-weight:900;letter-spacing:4px;text-decoration:none;color:#fff;text-transform:uppercase}.nl span{color:var(--red)}
+.nback{color:rgba(255,255,255,.4);text-decoration:none;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;transition:color .2s}.nback:hover{color:#fff}
+.ncta{background:var(--teal);color:#fff;text-decoration:none;font-family:var(--fd);font-weight:700;font-size:11px;letter-spacing:2px;text-transform:uppercase;padding:10px 24px;border-radius:2px;transition:background .2s}.ncta:hover{background:var(--teal2)}
+/* HERO */
+.hero{min-height:92vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:140px 48px 80px;position:relative;overflow:hidden;background:#071A1A}
+.hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(13,107,107,.1) 1px,transparent 1px),linear-gradient(90deg,rgba(13,107,107,.1) 1px,transparent 1px);background-size:56px 56px}
+.hero::after{content:'';position:absolute;bottom:-100px;left:50%;transform:translateX(-50%);width:900px;height:600px;background:radial-gradient(circle,rgba(13,107,107,.2) 0%,transparent 65%);pointer-events:none}
+.hin{position:relative;z-index:1;max-width:920px}
+.pill{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(13,107,107,.5);background:rgba(13,107,107,.12);padding:7px 18px;border-radius:2px;margin-bottom:24px;font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:#3DB8B8}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+.pd{width:6px;height:6px;background:#3DB8B8;border-radius:50%;animation:blink 2s infinite}
+@keyframes up{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+.h1{font-family:var(--fd);font-size:clamp(52px,9.5vw,116px);font-weight:900;line-height:.86;letter-spacing:-2px;text-transform:uppercase;color:#fff;margin-bottom:24px;animation:up .7s ease both}.h1 em{font-style:normal;color:var(--red)}
+.hsub{font-size:clamp(17px,2vw,21px);line-height:1.75;color:rgba(255,255,255,.5);max-width:660px;margin:0 auto 40px;animation:up .7s .15s ease both;opacity:0}
+.price-badge{display:inline-flex;align-items:center;gap:16px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);padding:14px 28px;border-radius:2px;margin-bottom:36px;animation:up .7s .22s ease both;opacity:0;flex-wrap:wrap;justify-content:center}
+.pb-item{text-align:center}.pb-val{font-family:var(--fd);font-size:26px;font-weight:900;color:#fff;display:block;line-height:1}.pb-lbl{font-size:11px;color:rgba(255,255,255,.28);letter-spacing:.5px;margin-top:3px}
+.pb-div{width:1px;height:36px;background:rgba(255,255,255,.08)}
+.hbtns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;animation:up .7s .32s ease both;opacity:0}
+.bp{background:var(--teal);color:#fff;text-decoration:none;font-family:var(--fd);font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:2.5px;padding:18px 44px;border-radius:2px;display:inline-block;transition:all .2s}.bp:hover{background:var(--teal2);transform:translateY(-2px);box-shadow:0 12px 40px rgba(13,107,107,.4)}
+.bo{background:transparent;color:#fff;text-decoration:none;font-family:var(--fd);font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:2px;padding:16px 36px;border-radius:2px;border:1px solid rgba(255,255,255,.18);display:inline-block;transition:all .2s}.bo:hover{border-color:rgba(255,255,255,.45);transform:translateY(-2px)}
+.htrust{display:flex;align-items:center;justify-content:center;gap:28px;flex-wrap:wrap;margin-top:52px;padding-top:28px;border-top:1px solid rgba(255,255,255,.06);animation:up .7s .42s ease both;opacity:0}
+.ht{font-size:12px;color:rgba(255,255,255,.25)}.ht strong{color:rgba(255,255,255,.45);font-weight:500}
+.sec{padding:88px 48px}.con{max-width:1100px;margin:0 auto}
+.sec-white{background:#fff}.sec-off{background:var(--offwhite)}.sec-dark{background:#071A1A}
+.ey{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--accent);margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.ey::before{content:'';width:24px;height:1px;background:var(--accent)}.ey.cen{justify-content:center}.ey.cen::before{display:none}
+.ey.lt{color:#3DB8B8}.ey.lt::before{background:#3DB8B8}
+.sh{font-family:var(--fd);font-size:clamp(32px,5vw,60px);font-weight:900;line-height:.92;letter-spacing:-.5px;text-transform:uppercase;margin-bottom:14px}
+.sh span{color:var(--red)}.sh.dk{color:var(--char)}.sh.lt{color:#fff}
+.ss{font-size:17px;line-height:1.75;color:var(--body);max-width:560px;margin-bottom:48px}.ss.cen{text-align:center;margin-left:auto;margin-right:auto}.cen{text-align:center}
+/* SPECIALTY CARDS */
+.spec-intro{display:grid;grid-template-columns:1fr 2fr;gap:56px;align-items:start;margin-bottom:64px}
+.spec-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.spec{background:#fff;border:1px solid #E0E0E0;border-radius:4px;padding:28px 22px;border-top:3px solid var(--teal);transition:all .2s;position:relative}.spec:hover{transform:translateY(-3px);box-shadow:0 12px 36px rgba(0,0,0,.08)}
+.spec-icon{font-size:32px;margin-bottom:14px}
+.spec-tag{display:inline-block;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;padding:3px 10px;border-radius:2px;margin-bottom:10px;background:rgba(13,107,107,.06);border:1px solid rgba(13,107,107,.15);color:var(--teal);font-weight:600}
+.spec h4{font-family:var(--fd);font-size:20px;font-weight:800;text-transform:uppercase;letter-spacing:.3px;color:var(--char);margin-bottom:8px;line-height:.95}
+.spec p{font-size:12px;color:var(--body);line-height:1.6;margin-bottom:16px}
+.spec-features{display:flex;flex-direction:column;gap:6px}
+.spec-features li{display:flex;align-items:flex-start;gap:8px;font-size:11px;color:var(--body);list-style:none}
+.spec-features li::before{content:'✓';color:var(--green);font-weight:700;flex-shrink:0;font-size:10px;margin-top:1px}
+/* WHAT'S INSIDE */
+.sys-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#E0E0E0;border:1px solid #E0E0E0;border-radius:4px;overflow:hidden;margin-top:48px}
+.sg{background:#fff;padding:36px 32px;border-top:3px solid transparent;transition:all .2s}.sg:hover{background:#FAFAFA;border-top-color:var(--teal)}
+.sg-icon{font-size:28px;margin-bottom:14px}
+.sg-num{font-family:var(--fd);font-size:44px;font-weight:900;color:var(--offwhite);line-height:1;margin-bottom:4px}
+.sg h4{font-family:var(--fd);font-size:19px;font-weight:800;text-transform:uppercase;letter-spacing:.3px;color:var(--char);margin-bottom:8px}
+.sg p{font-size:13px;color:var(--body);line-height:1.65}
+/* PATIENT JOURNEY */
+.journey{display:flex;flex-direction:column;border:1px solid #E0E0E0;border-radius:4px;overflow:hidden;margin-top:48px}
+.jstage{display:grid;grid-template-columns:200px 1fr;border-bottom:1px solid #E0E0E0}
+.jstage:last-child{border-bottom:none}
+.jlabel{background:#071A1A;padding:28px 24px;display:flex;flex-direction:column;justify-content:center}
+.jl-num{font-family:var(--fd);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:#3DB8B8;margin-bottom:4px}
+.jl-name{font-family:var(--fd);font-size:17px;font-weight:800;text-transform:uppercase;color:#fff;line-height:1.1}
+.jbody{background:#fff;padding:28px 32px;display:flex;flex-direction:column;justify-content:center}
+.jb-head{font-size:14px;font-weight:600;color:var(--char);margin-bottom:8px}
+.jb-items{display:flex;flex-wrap:wrap;gap:6px}
+.jchip{background:var(--offwhite);border:1px solid #E0E0E0;padding:4px 12px;border-radius:2px;font-size:11px;color:var(--body)}
+.jchip.sms{background:rgba(191,0,0,.05);border-color:rgba(191,0,0,.15);color:var(--red)}
+.jchip.email{background:rgba(13,107,107,.05);border-color:rgba(13,107,107,.15);color:var(--teal)}
+.jchip.auto{background:rgba(26,107,46,.05);border-color:rgba(26,107,46,.15);color:var(--green)}
+/* PRICING */
+.price-box{background:#071A1A;border:1px solid rgba(13,107,107,.25);border-top:3px solid var(--teal);border-radius:4px;padding:56px;text-align:center;margin-top:48px;position:relative;overflow:hidden}
+.price-box::before{content:'';position:absolute;bottom:-60px;left:50%;transform:translateX(-50%);width:600px;height:400px;background:radial-gradient(circle,rgba(13,107,107,.2) 0%,transparent 65%);pointer-events:none}
+.pb-inner{position:relative;z-index:1}
+.pb-eyebrow{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:#3DB8B8;margin-bottom:16px}
+.pb-main{font-family:var(--fd);font-size:clamp(40px,7vw,80px);font-weight:900;color:#fff;line-height:.9;margin-bottom:8px}
+.pb-main span{color:var(--red)}.pb-sub{font-size:14px;color:rgba(255,255,255,.3);margin-bottom:40px}
+.pb-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.pb-includes{display:flex;align-items:center;justify-content:center;gap:24px;flex-wrap:wrap;margin-top:32px;padding-top:28px;border-top:1px solid rgba(255,255,255,.07)}
+.pbi{font-size:12px;color:rgba(255,255,255,.28)}.pbi strong{color:rgba(255,255,255,.5);font-weight:500}
+/* FAQ */
+.faqlist{margin-top:48px;border:1px solid #E0E0E0;border-radius:4px;overflow:hidden}
+.faq{border-bottom:1px solid #E0E0E0}.faq:last-child{border-bottom:none}
+.fq{padding:20px 26px;font-size:15px;font-weight:600;color:var(--char);cursor:pointer;display:flex;align-items:center;justify-content:space-between;transition:background .15s;user-select:none}.fq:hover{background:var(--offwhite)}.fqi{font-size:20px;color:var(--teal);transition:transform .25s;flex-shrink:0}
+.fa{max-height:0;overflow:hidden;transition:max-height .3s ease;background:var(--offwhite)}.fai{padding:0 26px 22px;font-size:14px;line-height:1.75;color:var(--body)}
+.faq.open .fa{max-height:400px}.faq.open .fqi{transform:rotate(45deg)}.faq.open .fq{background:var(--offwhite)}
+/* CHECKOUT */
+.checkout{background:#050F0F;padding:100px 48px;position:relative;overflow:hidden}
+.checkout::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(13,107,107,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(13,107,107,.06) 1px,transparent 1px);background-size:56px 56px}
+.checkout::after{content:'';position:absolute;top:-100px;left:50%;transform:translateX(-50%);width:700px;height:500px;background:radial-gradient(circle,rgba(13,107,107,.15) 0%,transparent 65%);pointer-events:none}
+.coin{max-width:740px;margin:0 auto;position:relative;z-index:1}
+.co-head{text-align:center;margin-bottom:56px}
+.cobadge{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(13,107,107,.4);background:rgba(13,107,107,.1);padding:7px 18px;border-radius:2px;margin-bottom:24px;font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:#3DB8B8}
+.coh{font-family:var(--fd);font-size:clamp(40px,7vw,80px);font-weight:900;text-transform:uppercase;color:#fff;line-height:.9;margin-bottom:12px}.coh span{color:var(--red)}
+.cosub{font-size:15px;color:rgba(255,255,255,.4);line-height:1.65}
+.co-options{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.co-opt{background:#0A1A1A;border:1px solid rgba(13,107,107,.15);border-radius:4px;padding:40px;text-align:center}
+.co-opt.primary{border-top:2px solid var(--teal)}.co-opt.secondary{border-top:2px solid rgba(255,255,255,.08)}
+.co-opt-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.25);margin-bottom:16px}
+.co-opt h4{font-family:var(--fd);font-size:22px;font-weight:800;text-transform:uppercase;color:#fff;margin-bottom:8px}
+.co-opt p{font-size:13px;color:rgba(255,255,255,.35);line-height:1.6;margin-bottom:24px}
+.coph{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;min-height:160px;border:1px dashed rgba(13,107,107,.25);border-radius:2px;padding:28px}
+.coph-icon{font-size:28px;opacity:.2}.coph-txt{font-size:12px;color:rgba(255,255,255,.18);text-align:center;line-height:1.6}
+.coph-tag{background:rgba(13,107,107,.12);border:1px solid rgba(13,107,107,.3);color:#3DB8B8;font-size:10px;letter-spacing:2px;text-transform:uppercase;padding:6px 16px;border-radius:2px}
+.book-btn{display:block;background:transparent;color:#fff;text-decoration:none;font-family:var(--fd);font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:2px;padding:16px;border-radius:2px;border:1px solid rgba(255,255,255,.15);transition:all .2s;text-align:center}.book-btn:hover{border-color:rgba(255,255,255,.4);transform:translateY(-1px)}
+.coguarantee{margin-top:24px;font-size:12px;color:rgba(255,255,255,.2);text-align:center}
+footer{background:#040C0C;border-top:1px solid rgba(255,255,255,.04)}
+.fbot{max-width:1100px;margin:0 auto;padding:18px 48px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.fbot span,.fbot a{font-size:12px;color:rgba(255,255,255,.2);text-decoration:none}.fbot a{color:var(--red)}.fbot a:hover{text-decoration:underline}
+.fleg{display:flex;gap:20px}.fleg a{font-size:12px;color:rgba(255,255,255,.15);text-decoration:none;transition:color .2s}.fleg a:hover{color:rgba(255,255,255,.4)}
+@media(max-width:1024px){.spec-grid{grid-template-columns:repeat(2,1fr)}.spec-intro{grid-template-columns:1fr}}
+@media(max-width:900px){.sys-grid,.co-options{grid-template-columns:1fr}.jstage{grid-template-columns:1fr}}
+@media(max-width:640px){nav{padding:0 20px}.hero,.sec,.checkout{padding-left:24px;padding-right:24px}.price-box{padding:36px 24px}.spec-grid{grid-template-columns:1fr}}
+
+/* ===== LOGO BAR ===== */
+.lbar{background:#0A0A0A;border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06);padding:40px 0 44px;overflow:hidden}
+.lbar-head{text-align:center;margin-bottom:28px;padding:0 48px}
+.lbar-eyebrow{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.25);margin-bottom:10px}
+.lbar-title{font-family:var(--fd, "Barlow Condensed",sans-serif);font-size:clamp(22px,3vw,32px);font-weight:900;text-transform:uppercase;letter-spacing:-.3px;color:#fff}
+.lbar-title span{color:#BF0000}
+.lbar-track-wrap{position:relative;overflow:hidden}
+.lbar-track-wrap::before,.lbar-track-wrap::after{content:"";position:absolute;top:0;bottom:0;width:120px;z-index:2;pointer-events:none}
+.lbar-track-wrap::before{left:0;background:linear-gradient(90deg,#0A0A0A,transparent)}
+.lbar-track-wrap::after{right:0;background:linear-gradient(270deg,#0A0A0A,transparent)}
+.lbar-track{display:flex;align-items:center;gap:0;width:max-content}
+@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.lbar-track{animation:marquee 32s linear infinite}
+.lbar-track:hover{animation-play-state:paused}
+.llogo{display:flex;align-items:center;justify-content:center;padding:0 48px;flex-shrink:0;opacity:.4;transition:opacity .3s;filter:grayscale(100%) brightness(200%)}
+.llogo:hover{opacity:.75}
+.llogo img{height:36px;width:auto;max-width:140px;object-fit:contain;display:block}
+.llogo-ph{display:flex;align-items:center;justify-content:center;height:36px;padding:0 4px}
+.llogo-ph-inner{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.06);border-radius:2px;height:36px;display:flex;align-items:center;justify-content:center;padding:0 20px;white-space:nowrap}
+.llogo-ph-text{font-family:var(--fd,"Barlow Condensed",sans-serif);font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.25)}
+.lbar-note{text-align:center;margin-top:24px;padding:0 48px;font-size:11px;color:rgba(255,255,255,.15);letter-spacing:.5px}
+</style>
+</head>
+<body><div id="rc-review-draft-banner" style="position:relative;z-index:99999;width:100%;padding:8px 16px;background:#f2c94c;color:#161616;text-align:center;font:800 12px/1.4 system-ui,-apple-system,sans-serif;letter-spacing:.08em;border-bottom:1px solid rgba(0,0,0,.25);">REVIEW DRAFT — NOT THE LIVE WEBSITE</div>
+<nav>
+  <a href="index.html" class="nl">RICO <span>CLOUD</span></a>
+  <a href="solutions.html" class="nback">← All Solutions</a>
+  <a href="#checkout" class="ncta">Get This System</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hin">
+    <div class="pill"><span class="pd"></span>Medical Office · Snapshot System</div>
+    <h1 class="h1">Medical<br>Office <em>System.</em></h1>
+    <p class="hsub">A complete, pre-built automation system for medical practices of all types. Patient intake, appointment follow-up, review generation, and reactivation campaigns — deployed and running in 7 days.</p>
+    <div class="price-badge">
+      <div class="pb-item"><span class="pb-val">$1,000</span><span class="pb-lbl">System Deployment Fee</span></div>
+      <div class="pb-div"></div>
+      <div class="pb-item"><span class="pb-val">$150/mo</span><span class="pb-lbl">Base Subscription</span></div>
+      <div class="pb-div"></div>
+      <div class="pb-item"><span class="pb-val">7 Days</span><span class="pb-lbl">To Go Live</span></div>
+      <div class="pb-div"></div>
+      <div class="pb-item"><span class="pb-val">7</span><span class="pb-lbl">Specialties</span></div>
+    </div>
+    <div class="hbtns">
+      <a href="#checkout" class="bp">Get This System — $1,000</a>
+      <a href="book.html" class="bo">Book a Discovery Call</a>
+    </div>
+    <div class="htrust">
+      <span class="ht">7 specialty variants available</span>
+      <span class="ht" style="color:rgba(255,255,255,.1)">|</span>
+      <span class="ht"><strong>New patient</strong> intake to recall — all automated</span>
+      <span class="ht" style="color:rgba(255,255,255,.1)">|</span>
+      <span class="ht"><strong>100%</strong> done for you</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== LOGO BAR ===== -->
+<div class="lbar">
+  <div class="lbar-head">
+    <div class="lbar-eyebrow">Trusted By</div>
+    <div class="lbar-title">Businesses <span>Running on Rico Cloud</span></div>
+  </div>
+  <div class="lbar-track-wrap">
+    <div class="lbar-track" id="logoTrack">
+      <!-- LOGO SLOTS — replace llogo-ph divs with <img> tags when logos are ready -->
+      <!-- Slot 1 --><div class="llogo"><div class="llogo-ph"><div class="llogo-ph-inner"><span class="llogo-ph-text">Client Logo</span></div></div></div>
+      <!-- Slot 2 --><div class="llogo"><div class="llogo-ph"><div class="llogo-ph-inner"><span class="llogo-ph-text">Client Logo</span></div></div></div>
+      <!-- Slot 3 --><div class="llogo"><div class="llogo-ph"><div class="llogo-ph-inner"><span class="llogo-ph-text">Client Logo</span></div></div></div>
+      <!-- Slot 4 --><div class="llogo"><div class="llogo-ph"><div class="llogo-ph-inner"><span class="llogo-ph-text">Client Logo</span></div></div></div>
+      <!-- Slot 5 --><div class="llogo"><div class="llogo-ph"><div class="llogo-ph-inner"><span class="llogo-ph-text">Client Logo</span></div></div></div>
+      <!-- Slot 6 --><div class="llogo"><div class="llogo-ph"><div class="llogo-ph-inner"><span class="llogo-ph-text">Client Logo</span></div></div></div>
+      <!-- Slot 7 --><div class="llogo"><div class="llogo-ph"><div class="llogo-ph-inner"><span class="llogo-ph-text">Client Logo</span></div></div></div>
+      <!-- Slot 8 --><div class="llogo"><div class="llogo-ph"><div class="llogo-ph-inner"><span class="llogo-ph-text">Client Logo</span></div></div></div>
+      <!-- DUPLICATE SET for seamless loop -->
+      <div class="llogo"><div class="llogo-ph"><div class="llogo-ph-inner"><span class="llogo-ph-text">Client Logo</span></div></div></div>
+      <div class="llogo"><div class="llogo-ph"><div class="llogo-ph-inner"><span class="llogo-ph-text">Client Logo</span></div></div></div>
+      <div class="llogo"><div class="llogo-ph"><div class="llogo-ph-inner"><span class="llogo-ph-text">Client Logo</span></div></div></div>
+      <div class="llogo"><div class="llogo-ph"><div class="llogo-ph-inner"><span class="llogo-ph-text">Client Logo</span></div></div></div>
+      <div class="llogo"><div class="llogo-ph"><div class="llogo-ph-inner"><span class="llogo-ph-text">Client Logo</span></div></div></div>
+      <div class="llogo"><div class="llogo-ph"><div class="llogo-ph-inner"><span class="llogo-ph-text">Client Logo</span></div></div></div>
+      <div class="llogo"><div class="llogo-ph"><div class="llogo-ph-inner"><span class="llogo-ph-text">Client Logo</span></div></div></div>
+      <div class="llogo"><div class="llogo-ph"><div class="llogo-ph-inner"><span class="llogo-ph-text">Client Logo</span></div></div></div>
+    </div>
+  </div>
+  <div class="lbar-note">Logos displayed with client permission · More added regularly</div>
+</div>
+<!-- ===== END LOGO BAR ===== -->
+
+
+<!-- SPECIALTIES -->
+<section class="sec sec-off" id="specialties">
+  <div class="con">
+    <div class="ey cen">Available Specialties</div>
+    <h2 class="sh dk cen">One system.<br><span>Every specialty.</span></h2>
+    <p class="ss cen">The Medical Office System is built as a universal foundation — then configured for your specific specialty during intake. Select the practice type that matches yours.</p>
+    <div class="spec-grid">
+
+      <div class="spec">
+        <div class="spec-icon">🏥</div>
+        <div class="spec-tag">General</div>
+        <h4>Primary Care</h4>
+        <p>Annual wellness recalls, new patient intake, chronic condition check-ins, and referral management workflows.</p>
+        <ul class="spec-features">
+          <li>Annual wellness recall campaigns</li>
+          <li>New patient onboarding sequence</li>
+          <li>Chronic care check-in automation</li>
+          <li>Google review generation</li>
+        </ul>
+      </div>
+
+      <div class="spec">
+        <div class="spec-icon">✨</div>
+        <div class="spec-tag">Aesthetics</div>
+        <h4>Dermatology</h4>
+        <p>Cosmetic and medical derm — treatment follow-up, annual skin check reminders, and product upsell sequences.</p>
+        <ul class="spec-features">
+          <li>Post-treatment follow-up sequences</li>
+          <li>Annual skin check recall</li>
+          <li>Cosmetic service upsell campaigns</li>
+          <li>Before/after review requests</li>
+        </ul>
+      </div>
+
+      <div class="spec">
+        <div class="spec-icon">💆</div>
+        <div class="spec-tag">Aesthetics &amp; Wellness</div>
+        <h4>Medical Spa</h4>
+        <p>Botox, filler, laser, and body contouring — rebooking automation, membership campaigns, and VIP client retention.</p>
+        <ul class="spec-features">
+          <li>Post-treatment rebook sequences</li>
+          <li>Membership and package campaigns</li>
+          <li>Seasonal promotion workflows</li>
+          <li>VIP client retention automation</li>
+        </ul>
+      </div>
+
+      <div class="spec">
+        <div class="spec-icon">👁️</div>
+        <div class="spec-tag">Vision</div>
+        <h4>Ophthalmology</h4>
+        <p>Surgical and medical eye care — pre-op prep sequences, post-surgical follow-up, and annual exam recall campaigns.</p>
+        <ul class="spec-features">
+          <li>Pre-surgical prep sequences</li>
+          <li>Post-op follow-up automation</li>
+          <li>Annual exam recall campaigns</li>
+          <li>Surgical consultation nurture</li>
+        </ul>
+      </div>
+
+      <div class="spec">
+        <div class="spec-icon">🔍</div>
+        <div class="spec-tag">Vision</div>
+        <h4>Optometry</h4>
+        <p>Annual exam recall, frame and lens upsell sequences, contact lens reorder reminders, and new patient intake.</p>
+        <ul class="spec-features">
+          <li>Annual exam recall automation</li>
+          <li>Contact lens reorder reminders</li>
+          <li>Frame/lens upsell sequences</li>
+          <li>New patient onboarding flow</li>
+        </ul>
+      </div>
+
+      <div class="spec">
+        <div class="spec-icon">🦴</div>
+        <div class="spec-tag">Musculoskeletal</div>
+        <h4>Orthopedic</h4>
+        <p>Pre-surgical preparation, post-op recovery sequences, Physical therapist referral coordination, and return-to-activity follow-up.</p>
+        <ul class="spec-features">
+          <li>Pre-surgical prep sequences</li>
+          <li>Post-op recovery check-ins</li>
+          <li>Physical therapist referral coordination</li>
+          <li>Return-to-activity milestone tracking</li>
+        </ul>
+      </div>
+
+      <div class="spec">
+        <div class="spec-icon">🏃</div>
+        <div class="spec-tag">Sports Medicine</div>
+        <h4>Sports Medicine</h4>
+        <p>Injury-driven intake, performance clearance sequences, athlete recall, and return-to-sport follow-up workflows.</p>
+        <ul class="spec-features">
+          <li>Injury-specific intake sequences</li>
+          <li>Return-to-sport clearance flow</li>
+          <li>Athlete performance recall</li>
+          <li>Concussion protocol follow-up</li>
+        </ul>
+      </div>
+
+      <!-- CALL TO ACTION CARD -->
+      <div class="spec" style="background:var(--teal);border-color:var(--teal);border-top-color:#fff;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;gap:14px">
+        <div style="font-size:32px">📋</div>
+        <h4 style="color:#fff;font-size:20px">Don't see your specialty?</h4>
+        <p style="color:rgba(255,255,255,.7);font-size:13px">Book a discovery call — we scope custom builds for practices not in our current library.</p>
+        <a href="book.html" style="display:inline-block;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);color:#fff;text-decoration:none;font-family:var(--fd);font-weight:700;font-size:11px;letter-spacing:2px;text-transform:uppercase;padding:12px 24px;border-radius:2px;transition:all .2s">Book Discovery Call →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SYSTEM COMPONENTS -->
+<section class="sec sec-white">
+  <div class="con">
+    <div class="ey cen">System Components</div>
+    <h2 class="sh dk cen">Every component.<br><span>Pre-built.</span></h2>
+    <p class="ss cen">Regardless of specialty, every Medical Office deployment includes the full system foundation.</p>
+    <div class="sys-grid">
+      <div class="sg"><div class="sg-icon">🔄</div><div class="sg-num">28+</div><h4>Automation Workflows</h4><p>Three-layer automation architecture — pipeline, tag-triggered, and sequence workflows — covering every patient touchpoint.</p></div>
+      <div class="sg"><div class="sg-icon">🗂️</div><div class="sg-num">4</div><h4>Custom Pipelines</h4><p>New Patient Nurture, Patient Acquisition, Operational Fulfillment, and Hiring Staff — all 4 pipelines pre-built.</p></div>
+      <div class="sg"><div class="sg-icon">📋</div><div class="sg-num">✓</div><h4>Patient Intake Flows</h4><p>Specialty-specific intake forms, new patient questionnaires, and intake email sequences — all pre-built and connected.</p></div>
+      <div class="sg"><div class="sg-icon">📅</div><div class="sg-num">✓</div><h4>Appointment Automation</h4><p>Booking confirmation, 24-hr and 2-hr reminders, no-show recovery, and rescheduling sequences for every appointment type.</p></div>
+      <div class="sg"><div class="sg-icon">⭐</div><div class="sg-num">✓</div><h4>Review Campaigns</h4><p>Google and Healthgrades review request sequences triggered at the right moments in the patient journey.</p></div>
+      <div class="sg"><div class="sg-icon">📆</div><div class="sg-num">360</div><h4>Recall &amp; Reactivation</h4><p>Annual recall campaigns and 360-day long-term nurture keep dormant patients coming back — completely automated.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PATIENT JOURNEY -->
+<section class="sec sec-off">
+  <div class="con">
+    <div class="ey cen">The Full Patient Journey</div>
+    <h2 class="sh dk cen">New patient to<br><span>loyal patient. Automated.</span></h2>
+    <div class="journey">
+      <div class="jstage">
+        <div class="jlabel"><div class="jl-num">Stage 01</div><div class="jl-name">New Inquiry</div></div>
+        <div class="jbody"><div class="jb-head">New patient contacts the practice — system responds within seconds</div><div class="jb-items"><span class="jchip auto">Specialty tag applied</span><span class="jchip sms">Instant SMS response</span><span class="jchip email">New patient welcome email</span><span class="jchip auto">Pipeline entry</span><span class="jchip auto">Front desk notification</span></div></div>
+      </div>
+      <div class="jstage">
+        <div class="jlabel"><div class="jl-num">Stage 02</div><div class="jl-name">Appointment Booked</div></div>
+        <div class="jbody"><div class="jb-head">First appointment confirmed — paperwork, reminders, and prep sequence fires</div><div class="jb-items"><span class="jchip email">Intake paperwork link</span><span class="jchip sms">Booking confirmation</span><span class="jchip sms">24-hr reminder</span><span class="jchip sms">2-hr reminder</span><span class="jchip auto">No-show recovery</span></div></div>
+      </div>
+      <div class="jstage">
+        <div class="jlabel"><div class="jl-num">Stage 03</div><div class="jl-name">Post-Visit</div></div>
+        <div class="jbody"><div class="jb-head">Visit complete — follow-up, care instructions, and review request</div><div class="jb-items"><span class="jchip sms">Post-visit follow-up SMS</span><span class="jchip email">Care instructions email</span><span class="jchip auto">Google review request</span><span class="jchip auto">Healthgrades request</span><span class="jchip auto">Next appointment prompt</span></div></div>
+      </div>
+      <div class="jstage">
+        <div class="jlabel"><div class="jl-num">Stage 04</div><div class="jl-name">Ongoing Care</div></div>
+        <div class="jbody"><div class="jb-head">Active patient — appointment reminders, care check-ins, and treatment follow-up</div><div class="jb-items"><span class="jchip auto">Recurring visit reminders</span><span class="jchip email">Between-visit check-ins</span><span class="jchip auto">Treatment plan follow-up</span><span class="jchip sms">Prescription/referral follow-up</span></div></div>
+      </div>
+      <div class="jstage">
+        <div class="jlabel"><div class="jl-num">Stage 05</div><div class="jl-name">Annual Recall</div></div>
+        <div class="jbody"><div class="jb-head">Recall trigger fires at configured interval — wellness or exam recall sequence</div><div class="jb-items"><span class="jchip sms">Recall SMS</span><span class="jchip email">Annual reminder email</span><span class="jchip auto">Specialty-specific copy</span><span class="jchip auto">Booking CTA</span><span class="jchip auto">3-touch sequence</span></div></div>
+      </div>
+      <div class="jstage">
+        <div class="jlabel"><div class="jl-num">Stage 06</div><div class="jl-name">Reactivation</div></div>
+        <div class="jbody"><div class="jb-head">Lapsed patient who missed recall — 360-day nurture and reactivation campaigns</div><div class="jb-items"><span class="jchip email">LTN at 30-day intervals</span><span class="jchip sms">Reactivation SMS</span><span class="jchip auto">Seasonal health content</span><span class="jchip auto">Practice news updates</span><span class="jchip auto">Pipeline re-entry</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="sec sec-white">
+  <div class="con" style="max-width:800px">
+    <div class="ey cen">Investment</div>
+    <h2 class="sh dk cen">One system.<br><span>One price.</span></h2>
+    <div class="price-box">
+      <div class="pb-inner">
+        <div class="pb-eyebrow">Medical Office System — Complete Deployment</div>
+        <div class="pb-main">$1,000 <span>+</span> $150<span style="font-size:28px;color:rgba(255,255,255,.3)">/mo</span></div>
+        <div class="pb-sub">System Deployment Fee + Rico Cloud base subscription · All specialties priced the same</div>
+        <div class="pb-btns">
+          <a href="#checkout" class="bp">Get This System Now</a>
+          <a href="book.html" class="bo" style="border-color:rgba(255,255,255,.2)">Book Discovery Call First</a>
+        </div>
+        <div class="pb-includes">
+          <span class="pbi"><strong>7</strong> specialty variants</span>
+          </span>
+          <span class="pbi-sep" style="color:rgba(255,255,255,.1)">|</span>
+          <span class="pbi"><strong>7-day</strong> deployment</span>
+          </span>
+          <span class="pbi-sep" style="color:rgba(255,255,255,.1)">|</span>
+          <span class="pbi"><strong>360-day</strong> recall &amp; nurture</span>
+          </span>
+          <span class="pbi-sep" style="color:rgba(255,255,255,.1)">|</span>
+          <span class="pbi">Onboarding <strong>sold separately</strong></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec sec-off">
+  <div class="con" style="max-width:720px">
+    <div class="ey cen">Common Questions</div>
+    <h2 class="sh dk cen">Everything you<br><span>need to know.</span></h2>
+    <div class="faqlist">
+      <div class="faq"><div class="fq">Do all specialties cost the same?<span class="fqi">+</span></div><div class="fa"><div class="fai">Yes. All seven specialty variants — Primary Care, Dermatology, Medical Spa, Ophthalmology, Optometry, Orthopedic, and Sports Medicine — are deployed at the same $1,000 System Deployment Fee + $150/mo base subscription. No specialty is priced differently.</div></div></div>
+      <div class="faq"><div class="fq">What if I offer more than one specialty?<span class="fqi">+</span></div><div class="fa"><div class="fai">Book a discovery call. Multi-specialty practices require a scoping conversation to determine how many workflows and pipelines are needed. We'll walk through your practice structure and give you a quote for the full deployment.</div></div></div>
+      <div class="faq"><div class="fq">Is this HIPAA compliant?<span class="fqi">+</span></div><div class="fa"><div class="fai">Rico Cloud can be configured for HIPAA compliance at the platform level. The Medical Office system's automated messaging is designed as general appointment reminders and health information — not PHI transmission. Specific compliance requirements should be discussed on your discovery call so we can configure the system appropriately for your practice.</div></div></div>
+      <div class="faq"><div class="fq">How does the annual recall system work?<span class="fqi">+</span></div><div class="fa"><div class="fai">The recall system uses a date-based trigger configured during intake. When the trigger fires (e.g., 11 months after the last visit), the patient is automatically enrolled in a 3-touch recall sequence — one SMS and two emails spread over 2 weeks. If they don't rebook, they enter the 360-day long-term nurture sequence.</div></div></div>
+      <div class="faq"><div class="fq">What platforms do the review requests go to?<span class="fqi">+</span></div><div class="fa"><div class="fai">Google Business Profile is the primary platform — it has the highest SEO impact. Healthgrades is also included for medical practices where it's relevant. We configure your specific review links during the intake process.</div></div></div>
+      <div class="faq"><div class="fq">My specialty isn't in the list. Can you still build this for me?<span class="fqi">+</span></div><div class="fa"><div class="fai">Yes. Book a discovery call and we'll scope a custom medical specialty deployment for your practice. The core system architecture is the same — specialty-specific configuration is done during the intake process. Most specialties can be accommodated at the same price point.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CHECKOUT -->
+<!-- ONBOARDING UPSELL -->
+<section class="sec sec-off" id="onboarding">
+  <div class="con" style="max-width:900px">
+    <div class="ey cen">Onboarding</div>
+    <h2 class="sh dk cen">Your system is deployed.<br><span>Now learn how to run it.</span></h2>
+    <p class="ss cen" style="margin-bottom:0">Onboarding is separate from your System Deployment Fee. Choose the path that fits how you work.</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:48px">
+      <div style="background:#fff;border:1px solid #E0E0E0;border-radius:4px;overflow:hidden">
+        <div style="background:var(--offwhite);padding:32px 36px;border-bottom:1px solid #E0E0E0;border-top:3px solid #999">
+          <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#999;margin-bottom:10px">Self-Paced</div>
+          <div style="font-family:var(--fd);font-size:36px;font-weight:900;color:var(--char);line-height:.9;margin-bottom:6px">DIY Onboarding</div>
+          <div style="font-family:var(--fd);font-size:48px;font-weight:900;color:var(--char);line-height:1;margin-bottom:4px">$100</div>
+          <div style="font-size:13px;color:#999">One-time course access</div>
+        </div>
+        <div style="padding:28px 36px">
+          <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:28px">
+            <div style="display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--body)"><span style="color:var(--green);font-weight:700;flex-shrink:0"><section class="checkout" id="checkout">#10003;</span>Self-paced video course covering your entire system</div>
+            <div style="display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--body)"><span style="color:var(--green);font-weight:700;flex-shrink:0"><section class="checkout" id="checkout">#10003;</span>Step-by-step walkthroughs of every workflow and pipeline</div>
+            <div style="display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--body)"><span style="color:var(--green);font-weight:700;flex-shrink:0"><section class="checkout" id="checkout">#10003;</span>Written guides and reference documentation</div>
+            <div style="display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--body)"><span style="color:var(--green);font-weight:700;flex-shrink:0"><section class="checkout" id="checkout">#10003;</span>Complete at your own pace, on your own schedule</div>
+            <div style="display:flex;align-items:flex-start;gap:10px;font-size:14px;color:#bbb"><span style="color:#bbb;font-weight:700;flex-shrink:0"><section class="checkout" id="checkout">#8211;</span>No live call included</div>
+            <div style="display:flex;align-items:flex-start;gap:10px;font-size:14px;color:#bbb"><span style="color:#bbb;font-weight:700;flex-shrink:0"><section class="checkout" id="checkout">#8211;</span>No hands-on configuration</div>
+          </div>
+          <div style="display:block;background:var(--char);color:#fff;font-family:var(--fd);font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:2px;padding:14px;border-radius:2px;text-align:center">Add DIY Onboarding <section class="checkout" id="checkout">#8212; $100</div>
+          <div style="font-size:11px;color:#bbb;text-align:center;margin-top:10px">Available immediately after system deployment</div>
+        </div>
+      </div>
+      <div style="background:#fff;border:1px solid #D0D0D0;border-radius:4px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,.08)">
+        <div style="background:var(--char);padding:32px 36px;border-bottom:1px solid #2A2A2A;border-top:3px solid var(--red);position:relative">
+          <div style="position:absolute;top:16px;right:16px;background:var(--red);color:#fff;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;padding:4px 10px;border-radius:2px;font-weight:700">Recommended</div>
+          <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:10px">Done For You</div>
+          <div style="font-family:var(--fd);font-size:36px;font-weight:900;color:#fff;line-height:.9;margin-bottom:6px">Premium Onboarding</div>
+          <div style="font-family:var(--fd);font-size:48px;font-weight:900;color:#fff;line-height:1;margin-bottom:4px">$500</div>
+          <div style="font-size:13px;color:rgba(255,255,255,.3)">One-time onboarding fee</div>
+        </div>
+        <div style="padding:28px 36px">
+          <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:28px">
+            <div style="display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--body)"><span style="color:var(--green);font-weight:700;flex-shrink:0"><section class="checkout" id="checkout">#10003;</span>2-hour live onboarding call with a Rico Cloud specialist</div>
+            <div style="display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--body)"><span style="color:var(--green);font-weight:700;flex-shrink:0"><section class="checkout" id="checkout">#10003;</span>We configure your account settings and integrations with you</div>
+            <div style="display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--body)"><span style="color:var(--green);font-weight:700;flex-shrink:0"><section class="checkout" id="checkout">#10003;</span>Live walkthrough of every workflow, pipeline, and sequence</div>
+            <div style="display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--body)"><span style="color:var(--green);font-weight:700;flex-shrink:0"><section class="checkout" id="checkout">#10003;</span>Custom Q<section class="checkout" id="checkout">amp;A <section class="checkout" id="checkout">#8212; we answer every question specific to your business</div>
+            <div style="display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--body)"><span style="color:var(--green);font-weight:700;flex-shrink:0"><section class="checkout" id="checkout">#10003;</span>Full DIY course access included</div>
+            <div style="display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--body)"><span style="color:var(--green);font-weight:700;flex-shrink:0"><section class="checkout" id="checkout">#10003;</span>Recording of your session delivered after the call</div>
+          </div>
+          <div style="display:block;background:var(--red);color:#fff;font-family:var(--fd);font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:2px;padding:14px;border-radius:2px;text-align:center">Add Premium Onboarding <section class="checkout" id="checkout">#8212; $500</div>
+          <div style="font-size:11px;color:#bbb;text-align:center;margin-top:10px">Scheduled after your system is deployed and live</div>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:20px;background:rgba(191,0,0,.04);border:1px solid rgba(191,0,0,.12);border-radius:4px;padding:16px 24px;text-align:center">
+      <span style="font-size:13px;color:var(--body)"><section class="checkout" id="checkout">#128161; <section class="checkout" id="checkout">nbsp;Not sure which to pick? <strong>Most clients choose Premium</strong> <section class="checkout" id="checkout">#8212; the 2-hour call pays for itself the first time you avoid a workflow issue on your own.</span>
+    </div>
+  </div>
+</section>
+
+<section class="checkout" id="checkout">
+  <div class="coin">
+    <div class="co-head">
+      <div class="cobadge">🏥 Medical Office System — Get Started</div>
+      <h2 class="coh">Ready to automate<br><span>your practice?</span></h2>
+      <p class="cosub">Buy now and we send your intake form within 24 hours — or book a discovery call to walk through the system for your specific specialty first.</p>
+    </div>
+    <div class="co-options">
+      <div class="co-opt primary">
+        <div class="co-opt-label">Option 1 — Buy Now</div>
+        <h4>Get This System</h4>
+        <p>$1,000 System Deployment Fee + $150/mo base. Intake form sent within 24 hours. Live in 7 days.</p>
+        <div class="coph">
+          <div class="coph-icon">🔗</div>
+          <p class="coph-txt">Rico Cloud Order Form<br>Medical Office System — $1,000 setup</p>
+          <div class="coph-tag">Embed Order Form Here</div>
+        </div>
+      </div>
+      <div class="co-opt secondary">
+        <div class="co-opt-label">Option 2 — Talk First</div>
+        <h4>Book a Discovery Call</h4>
+        <p>30-minute call. We walk through exactly what gets built for your specialty before you commit.</p>
+        <a href="book.html" class="book-btn">Book a Free Discovery Call →</a>
+      </div>
+    </div>
+    <p class="coguarantee">🔒 &nbsp;Satisfaction guaranteed · Secure checkout · 7-day deployment</p>
+  </div>
+</section>
+
+<footer>
+  <div class="fbot">
+    <span>© 2026 Rico Cloud. All rights reserved. &nbsp;·&nbsp; <a href="https://land.ricocloud.net/terms--condition" target="_blank">Terms</a> &nbsp;·&nbsp; <a href="https://land.ricocloud.net/privacy-policy" target="_blank">Privacy</a></span>
+    <div class="fleg"><a href="solutions.html">All Solutions</a><a href="pricing.html">Platform Pricing</a><a href="https://app.ricocloud.net" target="_blank">Login</a></div>
+    <span>By <a href="https://rawreelmedia.com" target="_blank">Raw Reel Media</a> &nbsp;·&nbsp; Powered by <a href="https://ricocloud.net" target="_blank">Rico Cloud</a></span>
+  </div>
+</footer>
+<script>document.querySelectorAll('.fq').forEach(q=>{q.addEventListener('click',()=>{const f=q.parentElement,o=f.classList.contains('open');document.querySelectorAll('.faq').forEach(x=>x.classList.remove('open'));if(!o)f.classList.add('open');});});</script>
+</body>
+</html>
