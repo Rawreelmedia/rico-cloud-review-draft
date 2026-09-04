@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /
+
+# Temporary Rico Cloud review draft. Not the production website.
